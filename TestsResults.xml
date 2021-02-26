@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="45" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2021-02-26" time="12:17:37">
+  <environment user="DouglasChen" machine-name="U64-DOUGLASCHEN" cwd="D:\workspace\gli\DevOps\PSMultiLogPlus" user-domain="GLITW" platform="Microsoft Windows 10 專業版|C:\Windows|\Device\Harddisk2\Partition4" nunit-version="2.5.8.0" os-version="10.0.18363" clr-version="4.0.30319.42000" />
+  <culture-info current-culture="zh-TW" current-uiculture="zh-TW" />
+  <test-suite type="Powershell" name="Pester" executed="True" result="Success" success="True" time="1.7347" asserts="0">
+    <results>
+      <test-suite type="TestFixture" name="Start-FileLog" executed="True" result="Success" success="True" time="0.1404" asserts="0" description="Start-FileLog">
+        <results>
+          <test-case description="Enables File Logging" name="Start-FileLog.Enables File Logging" time="0.069" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Creates log file" name="Start-FileLog.Creates log file" time="0.0331" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Removes existing file" name="Start-FileLog.Removes existing file" time="0.0384" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Stop-FileLog" executed="True" result="Success" success="True" time="0.0555" asserts="0" description="Stop-FileLog">
+        <results>
+          <test-case description="Disables File Logging" name="Stop-FileLog.Disables File Logging" time="0.0555" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Write-FileLog" executed="True" result="Success" success="True" time="0.0452" asserts="0" description="Write-FileLog">
+        <results>
+          <test-case description="Writes to a file" name="Write-FileLog.Writes to a file" time="0.0452" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Start-EmailLog" executed="True" result="Success" success="True" time="0.0606" asserts="0" description="Start-EmailLog">
+        <results>
+          <test-case description="Enables E-mail Logging" name="Start-EmailLog.Enables E-mail Logging" time="0.0384" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Clears the entry cache" name="Start-EmailLog.Clears the entry cache" time="0.0222" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Stop-EmailLog" executed="True" result="Success" success="True" time="0.0938" asserts="0" description="Stop-EmailLog">
+        <results>
+          <test-case description="Disables Email Logging" name="Stop-EmailLog.Disables Email Logging" time="0.0408" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Clears the entry cache" name="Stop-EmailLog.Clears the entry cache" time="0.0265" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Retains the entry cache" name="Stop-EmailLog.Retains the entry cache" time="0.0265" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Send-EmailLog" executed="True" result="Success" success="True" time="0.1831" asserts="0" description="Send-EmailLog">
+        <results>
+          <test-case description="Sends e-mail" name="Send-EmailLog.Sends e-mail" time="0.0449" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Sends on empty" name="Send-EmailLog.Sends on empty" time="0.0285" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Does not send on empty" name="Send-EmailLog.Does not send on empty" time="0.0213" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Triggers based on log level" name="Send-EmailLog.Triggers based on log level" time="0.0337" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Retains log entry cache" name="Send-EmailLog.Retains log entry cache" time="0.0282" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Empties log entry cache" name="Send-EmailLog.Empties log entry cache" time="0.0265" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Write-EmailLog" executed="True" result="Success" success="True" time="0.0409" asserts="0" description="Write-EmailLog">
+        <results>
+          <test-case description="Writes to the entry cache" name="Write-EmailLog.Writes to the entry cache" time="0.0409" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Start-EventLogLog" executed="True" result="Success" success="True" time="0.1117" asserts="0" description="Start-EventLogLog">
+        <results>
+          <test-case description="Enables Event Log Logging" name="Start-EventLogLog.Enables Event Log Logging" time="0.0501" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Writes an error if source is in wrong log" name="Start-EventLogLog.Writes an error if source is in wrong log" time="0.0323" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Creates a new log if necessary" name="Start-EventLogLog.Creates a new log if necessary" time="0.0293" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Stop-EventLogLog" executed="True" result="Success" success="True" time="0.0507" asserts="0" description="Stop-EventLogLog">
+        <results>
+          <test-case description="Disables Event Log Logging" name="Stop-EventLogLog.Disables Event Log Logging" time="0.0507" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Write-EventLogLog" executed="True" result="Success" success="True" time="0.0496" asserts="0" description="Write-EventLogLog">
+        <results>
+          <test-case description="Writes to the Event Log" name="Write-EventLogLog.Writes to the Event Log" time="0.0496" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Start-HostLog" executed="True" result="Success" success="True" time="0.0708" asserts="0" description="Start-HostLog">
+        <results>
+          <test-case description="Enables Host Logging" name="Start-HostLog.Enables Host Logging" time="0.0437" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Sets the log level" name="Start-HostLog.Sets the log level" time="0.0271" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Stop-HostLog" executed="True" result="Success" success="True" time="0.0404" asserts="0" description="Stop-HostLog">
+        <results>
+          <test-case description="Disables Host Logging" name="Stop-HostLog.Disables Host Logging" time="0.0404" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Write-HostLog" executed="True" result="Success" success="True" time="0.0566" asserts="0" description="Write-HostLog">
+        <results>
+          <test-case description="Writes to the host" name="Write-HostLog.Writes to the host" time="0.0566" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Start-PassThruLog" executed="True" result="Success" success="True" time="0.0652" asserts="0" description="Start-PassThruLog">
+        <results>
+          <test-case description="Enables PassThru Logging" name="Start-PassThruLog.Enables PassThru Logging" time="0.0408" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Sets the log level" name="Start-PassThruLog.Sets the log level" time="0.0245" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Stop-PassThruLog" executed="True" result="Success" success="True" time="0.0425" asserts="0" description="Stop-PassThruLog">
+        <results>
+          <test-case description="Disables PassThru Logging" name="Stop-PassThruLog.Disables PassThru Logging" time="0.0425" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Write-PassThruLog" executed="True" result="Success" success="True" time="0.1497" asserts="0" description="Write-PassThruLog">
+        <results>
+          <test-case description="Writes to the Verbose or Information stream" name="Write-PassThruLog.Writes to the Verbose or Information stream" time="0.051" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Writes to the Warning stream" name="Write-PassThruLog.Writes to the Warning stream" time="0.0345" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Writes to the Error stream" name="Write-PassThruLog.Writes to the Error stream" time="0.0336" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Writes to the Error stream when no Exception is included" name="Write-PassThruLog.Writes to the Error stream when no Exception is included" time="0.0305" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Start-SlackLog" executed="True" result="Success" success="True" time="0.0436" asserts="0" description="Start-SlackLog">
+        <results>
+          <test-case description="Enables Slack Logging" name="Start-SlackLog.Enables Slack Logging" time="0.0436" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Stop-SlackLog" executed="True" result="Success" success="True" time="0.0427" asserts="0" description="Stop-SlackLog">
+        <results>
+          <test-case description="Disables Slack Logging" name="Stop-SlackLog.Disables Slack Logging" time="0.0427" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Write-SlackLog" executed="True" result="Success" success="True" time="0.0537" asserts="0" description="Write-SlackLog">
+        <results>
+          <test-case description="Calls the Slack webhook" name="Write-SlackLog.Calls the Slack webhook" time="0.0537" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Write-Log" executed="True" result="Success" success="True" time="0.0882" asserts="0" description="Write-Log">
+        <results>
+          <test-case description="Calls Write- Cmdlet for enable logging methods" name="Write-Log.Calls Write- Cmdlet for enable logging methods" time="0.0882" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Get-LogLevel" executed="True" result="Success" success="True" time="0.0753" asserts="0" description="Get-LogLevel">
+        <results>
+          <test-case description="Returns expected values" name="Get-LogLevel.Returns expected values" time="0.0465" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Throws on invalid EntryType" name="Get-LogLevel.Throws on invalid EntryType" time="0.0288" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Format-LogMessage" executed="True" result="Success" success="True" time="0.1086" asserts="0" description="Format-LogMessage">
+        <results>
+          <test-case description="Formats a message" name="Format-LogMessage.Formats a message" time="0.0405" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Includes Exception information" name="Format-LogMessage.Includes Exception information" time="0.0252" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Includes type information" name="Format-LogMessage.Includes type information" time="0.0213" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Includes type and Exception information" name="Format-LogMessage.Includes type and Exception information" time="0.0216" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="ConvertTo-HtmlUnorderedList" executed="True" result="Success" success="True" time="0.066" asserts="0" description="ConvertTo-HtmlUnorderedList">
+        <results>
+          <test-case description="Performs basic formatting" name="ConvertTo-HtmlUnorderedList.Performs basic formatting" time="0.0412" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Executes a ScriptBlock to perform formatting" name="ConvertTo-HtmlUnorderedList.Executes a ScriptBlock to perform formatting" time="0.0249" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

@@ -317,6 +317,9 @@ Describe Start-HostLog {
 
             Start-HostLog -LogLevel "Information"
             $Script:Settings["Host"].LogLevel | Should Be 2
+
+            Start-HostLog -TimeFormat "HH:mm:ss"
+            $Script:Settings["Host"].TimeFormat | Should Be "HH:mm:ss"
         }
     }
 }

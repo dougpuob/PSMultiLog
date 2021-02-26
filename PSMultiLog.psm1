@@ -43,6 +43,7 @@ $Script:Settings = @{
     Host = New-Object -TypeName psobject -Property @{
         Enabled = $false
         LogLevel = 0
+        TimeFormat= 'u'
     }
 
     PassThru = New-Object -TypeName psobject -Property @{
@@ -619,6 +620,9 @@ Function Start-HostLog {
     .PARAMETER LogLevel
     Specifies the minimum log entry severity to write to the host. The default
     value is "Error".
+    
+    .PARAMETER TimeFormat
+    Specifies the time sample format. The default is 'u'.
 
     .OUTPUTS
     None.
@@ -634,12 +638,16 @@ Function Start-HostLog {
     Param (
         [Parameter()]
         [ValidateSet("Information", "Warning", "Error")]
-        [string]$LogLevel = "Error"
+        [string]$LogLevel = "Error",
+        
+        [Parameter()]
+        [string]$TimeFormat = "u"
     )
 
     Process {
         $Script:Settings["Host"].Enabled = $true
         $Script:Settings["Host"].LogLevel = Get-LogLevel -EntryType $LogLevel
+        $Script:Settings["Host"].TimeFormat = $TimeFormat
     }
 }
 
@@ -1288,7 +1296,7 @@ Function Write-HostLog {
     )
 
     Process {
-        Write-Host -Object "[$($Entry.Timestamp.ToString("u"))] - " -NoNewline
+        Write-Host -Object "[$($Entry.Timestamp.ToString($Script:Settings["Host"].TimeFormat))] - " -NoNewline
 
         switch ($Entry.EntryType) {
             "Information" {
