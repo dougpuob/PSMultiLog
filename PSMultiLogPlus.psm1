@@ -44,6 +44,7 @@ $Script:Settings = @{
         Enabled = $false
         LogLevel = 0
         AnsiEscColor = $false
+        TimeFormat= 'u'
     }
 
     PassThru = New-Object -TypeName psobject -Property @{
@@ -623,6 +624,9 @@ Function Start-HostLog {
 
     .PARAMETER AnsiEscColor
     Enables ANSI escape color.
+    
+    .PARAMETER TimeFormat
+    Specifies the time sample format. The default is 'u'.
 
     .OUTPUTS
     None.
@@ -642,13 +646,17 @@ Function Start-HostLog {
 
         [Parameter()]
         [ValidateSet($true, $false)]
-        [switch]$AnsiEscColor = $false
+        [switch]$AnsiEscColor = $false,
+        
+        [Parameter()]
+        [string]$TimeFormat = "u"
     )
 
     Process {
         $Script:Settings["Host"].Enabled = $true
         $Script:Settings["Host"].LogLevel = Get-LogLevel -EntryType $LogLevel
         $Script:Settings["Host"].AnsiEscColor = $AnsiEscColor
+        $Script:Settings["Host"].TimeFormat = $TimeFormat
     }
 }
 
@@ -1300,7 +1308,7 @@ Function Write-HostLog {
     $SGRESC="$([char]27)"
     $CLEAR="$SGRESC[0m"
 
-        Write-Host -Object "[$($Entry.Timestamp.ToString("u"))] - " -NoNewline
+        Write-Host -Object "[$($Entry.Timestamp.ToString($Script:Settings["Host"].TimeFormat))] - " -NoNewline
 
         switch ($Entry.EntryType) {
             "Information" {

@@ -320,7 +320,10 @@ Describe Start-HostLog {
             $Script:Settings["Host"].LogLevel | Should Be 2
             
             Start-HostLog -AnsiEscColor
-            $Script:Settings["Host"].AnsiEscColor | Should Be $true          
+            $Script:Settings["Host"].AnsiEscColor | Should Be $true
+
+            Start-HostLog -TimeFormat "HH:mm:ss"
+            $Script:Settings["Host"].TimeFormat | Should Be "HH:mm:ss"
         }
     }
 }
